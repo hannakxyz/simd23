@@ -7,6 +7,7 @@ Created: 2023-10-05
 EXERCISE_FN void e3(int *e, int *out, int count){
   int sum = 0;
   int i = 0;
+#if 1 // NOTE(hanna): Det är betydligt snabbare att använda en manuellt unrollad loop här!
   for(; i + 8 <= count; i += 8){
     sum += e[i + 0];
     out[i + 0] = sum;
@@ -32,6 +33,7 @@ EXERCISE_FN void e3(int *e, int *out, int count){
     sum += e[i + 7];
     out[i + 7] = sum;
   }
+#endif
 #if 0
   for(; i < count; i += 1){
     sum += e[i];
