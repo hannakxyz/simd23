@@ -61,9 +61,9 @@ You will _not_ have to worry about integer overflows in this problem. You will a
 ## Exercise 4
 
 In this exercise you will sort positive integers <10^9 in batches of 8 numbers at a time, in ascending order. The reason for doing many batches at a time is to get more reasonable results from the profiling.
-In the end each subarray consisting of elements at indices 0..7, 8..15, 16..23, ... will be sorted.
+In the end each subarray consisting of elements at indices 0..3, 4..7, 8..13, ... will be sorted.
 See the given scalar implementation or ask me if this is unclear.
-This can be though of as a kernel for a full sorting algorithm which is invoked when working with a subproblem of <=8 elements.
+This can be though of as a kernel for a full sorting algorithm which is invoked when working with a subproblem of <=4 elements.
 
 ```c
 void e4(int *in, int *out, int count)
